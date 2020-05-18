@@ -59,8 +59,27 @@ function fillBoard(squareID, isX){
       board[2][2] = playPiece;
       break;
   }
+  findWinner();
 }
 
 function findWinner(){
-  
+  for(var i=0; i<3; i++){
+    var res = board[i][0] + board[i][1] + board[i][2];
+    if(res === "XXX"){
+      return res;
+    }
+    if(res === "OOO"){
+      return res;
+    }
+  }
+  for(var j=0; j<3; j++){
+    var res = board[0][j] + board[1][j] + board[2][j];
+    if(res === "XXX"){
+      return res;
+    }
+    if(res === "OOO"){
+      return res;
+    }
+  }
+  var res = 
 }
