@@ -12,14 +12,14 @@ input {
   border: 1px solid silver;
   display: block;
   font-size: 16px;
-  margin-bottom: 10px;
+  margin: 10px;
   padding: 5px;
-  width: 100%;
+  width: calc(100% - 20px);
 }
 
 #window{
     max-width: 640px;
-    margin: 30px auto;
+    margin: auto;
     border: 1px solid #ddd;
     box-shadow: 1px 3px 5px rgba(0,0,0,0.05);
     border-radius: 2px;
@@ -31,20 +31,19 @@ input {
   display : flex;
   flex-wrap : wrap;
   margin: auto;
+  padding: 10px;
 }
 
 .emptysquare{
-  margin: 5px;
-  width: calc(33.333% - 10px);
-  height: calc(33.333% - 10px);
+  width: 33.333%;
+  height: 33.333%;
   position : relative;
-  border: 5px solid green;
-  box-shadow: 1px 3px 5px rgba(0,0,0,0.05);
-  
+  border: 5px solid pink;
 }
 
-footer {
-  margin-top: 3em;
-  padding-top: 1.5em;
-  border-top: 1px solid lightgrey;
+.emptysquare:hover{
+  cursor: pointer;
+  border: 10px solid pink;
 }
+
+
