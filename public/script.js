@@ -1,2 +1,1 @@
-var socket = io.connect("https://talkie-talkie.glitch.me");
-toe-tac
+var socket = io.connect("https://tac-tic-toe.glitch.me/");
