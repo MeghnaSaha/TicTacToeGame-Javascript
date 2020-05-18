@@ -1,7 +1,7 @@
 var socket = io.connect("https://tac-tic-toe.glitch.me/");
-
 const squares = document.querySelectorAll(".emptysquare");
 const handle = document.getElementById("handle");
+
 var playerX = true;
 
 function selectSquare(){
@@ -33,4 +33,8 @@ socket.on("move", function(data){
     playerX = true;
   }
 });
+
+
+
+
 

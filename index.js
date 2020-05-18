@@ -17,3 +17,28 @@ io.on("connection",function(socket){
     socket.broadcast.emit("move", data);
   });
 });
+
+var board = [['', '', ''],
+            ['', '', ''],
+            ['', '', '']];
+
+function fillBoard(squareID, isX){
+  if(isX){
+    var playPiece = "X";
+  }
+  else{
+    var playPiece = "O";
+  }
+  switch(squareID){
+    case "square1":
+      board[0][1] = playPiece;
+      break;
+      case "square1":
+      board[0][1] = playPiece;
+      break;
+  }
+}
+
+function findWinner(){
+  
+}
