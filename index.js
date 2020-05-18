@@ -14,6 +14,6 @@ io.on("connection",function(socket){
   console.log("Socket connection made at" , socket.id);
   socket.on("move", function(data){
     console.log(data)
-    socket.broadcast.emit("typing", data);
+    socket.broadcast.emit("move", data);
   });
 });
