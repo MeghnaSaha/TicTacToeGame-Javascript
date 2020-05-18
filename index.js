@@ -23,6 +23,14 @@ var board = [['', '', ''],
             ['', '', ''],
             ['', '', '']];
 
+function drawYet(){
+  for(var i=0; i<3; i++){
+    for(var j=0; j<3; j++){
+    if(board[i][j] === ''){}
+    }
+  }
+}
+
 function fillBoard(squareID, isX){
   if(isX){
     var playPiece = "X";
@@ -59,7 +67,13 @@ function fillBoard(squareID, isX){
       board[2][2] = playPiece;
       break;
   }
-  findWinner();
+  var res = findWinner();
+  if(res === "XXX"){
+    app.render('winResult', {winner: "X"});
+  }
+  if(res === "OOO"){
+    app.render('winResult', {winner: "O"});
+  }
 }
 
 function findWinner(){
@@ -81,5 +95,19 @@ function findWinner(){
       return res;
     }
   }
-  var res = 
+  var res = board[0][0] + board[1][1] + board[2][2];
+  if(res === "XXX"){
+      return res;
+    }
+    if(res === "OOO"){
+      return res;
+    }
+  var res = board[0][2] + board[1][1] + board[2][0];
+  if(res === "XXX"){
+      return res;
+    }
+    if(res === "OOO"){
+      return res;
+    }
+  return null;
 }
