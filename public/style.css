@@ -18,14 +18,28 @@ input {
 }
 
 #window{
-    max-width: 600px;
+    max-width: 640px;
     margin: 30px auto;
     border: 1px solid #ddd;
     box-shadow: 1px 3px 5px rgba(0,0,0,0.05);
     border-radius: 2px;
 }
 
+#playArea{
+  width : 640px;
+  height : 640px;
+  display : flex;
+  flex-wrap : wrap;
+  margin: auto;
+}
+
 .emptysquare{
+  margin: 5px;
+  width: calc(33.333% - 10px);
+  height: calc(33.333% - 10px);
+  position : relative;
+  border: 5px solid green;
+  box-shadow: 1px 3px 5px rgba(0,0,0,0.05);
   
 }
 
