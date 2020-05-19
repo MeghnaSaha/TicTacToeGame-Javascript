@@ -24,13 +24,23 @@ input {
     border-radius: 2px;
 }
 
-#playArea{
+.playArea{
   width : 640px;
   height : 640px;
   display : flex;
   flex-wrap : wrap;
   margin: auto;
   padding: 10px;
+}
+
+.emptysquare:first-child,
+.emptysquare:nth-child(2),
+.emptysquare:nth-child(3){
+  border-top:none;
+}
+
+.emptysquare:nth-child(3n+1){
+  border-left:none;
 }
 
 .emptysquare{
@@ -42,7 +52,7 @@ input {
 
 .emptysquare:hover{
   cursor: pointer;
-  border: 10px solid pink;
+  background: url('https://cdn.glitch.com/1613f632-e960-433e-9ef8-9778ae67ee09%2Ftoe.jpg?v=1589836195603');
 }
 
 
