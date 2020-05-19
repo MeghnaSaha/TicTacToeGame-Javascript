@@ -75,13 +75,22 @@ function fillBoard(squareID, isX){
   }
   var res = findWinner();
   if(res === "XXX"){
+    board = [['', '', ''],
+            ['', '', ''],
+            ['', '', '']];
     io.sockets.emit("gameEnd", "TicTac");
   }
   if(res === "OOO"){
+    board = [['', '', ''],
+            ['', '', ''],
+            ['', '', '']];
     io.sockets.emit("gameEnd", "Toe");
   }
   var stillSpace = drawYet();
   if(!stillSpace){
+    board = [['', '', ''],
+            ['', '', ''],
+            ['', '', '']];
     io.sockets.emit("gameEnd", "Draw");
   }
 }

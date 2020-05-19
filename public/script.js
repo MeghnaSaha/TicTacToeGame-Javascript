@@ -37,8 +37,9 @@ socket.on("move", function(data){
 });
 
 socket.on("gameEnd", function(data){
-  if(data === "Draw") winningMessageTextElement.innerText = 'Draw!'
-  if(data === "TicTac") winningMessageTextElement.innerText = 'Draw!'
+  if(data === "Draw") winningMessageTextElement.innerText = 'Draw!';
+  if(data === "TicTac") winningMessageTextElement.innerText = 'TicTac Wins!';
+  if(data === "Toe") winningMessageTextElement.innerText = 'Toe Wins!'
   winningMessage.classList.add("show");
 })
 
