@@ -7,6 +7,7 @@ var server = app.listen(4000, function(){
   console.log("Listening to requests on port 4000");
 });
 
+app.set('view engine', 'ejs');
 app.use(express.static("public"));
 
 var io = socket(server);
