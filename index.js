@@ -75,15 +75,16 @@ function fillBoard(squareID, isX){
   }
   var res = findWinner();
   if(res === "XXX"){
-    //app.render('winResult', {winner: "X"});
-    app.send("X wins")
+    io.sockets.emit("gameEnd", "TicTac");
+    console.log("TicTac");
   }
   if(res === "OOO"){
-    app.render('winResult', {winner: "O"});
+    io.sockets.emit("gameEnd", "Toe");
   }
   var stillSpace = drawYet();
   if(!stillSpace){
-    app.render('drawScreen');
+    io.sockets.emit("gameEnd", "Draw");
+    console.log("draww");
   }
 }
 
