@@ -5,6 +5,7 @@ const winningMessage = document.getElementById("winningMessage");
 const winningMessageTextElement = document.querySelector('[data-winning-message-text]');
 
 var playerX = true;
+var playerAllowed = true;
 
 function selectSquare(){
   socket.emit("move", {
