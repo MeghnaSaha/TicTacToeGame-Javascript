@@ -43,6 +43,16 @@ input {
   border-left:none;
 }
 
+.emptysquare:nth-child(3n){
+  border-right:none;
+}
+
+.emptysquare:last-child,
+.emptysquare:nth-child(8),
+.emptysquare:nth-child(7){
+  border-bottom:none;
+}
+
 .emptysquare{
   width: 33.333%;
   height: 33.333%;
@@ -52,7 +62,7 @@ input {
 
 .emptysquare:hover{
   cursor: pointer;
-  background: url('https://cdn.glitch.com/1613f632-e960-433e-9ef8-9778ae67ee09%2Ftoe.jpg?v=1589836195603');
+  border: 5px solid white;
 }
 
 
