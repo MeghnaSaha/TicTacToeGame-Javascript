@@ -76,7 +76,6 @@ function fillBoard(squareID, isX){
   var res = findWinner();
   if(res === "XXX"){
     io.sockets.emit("gameEnd", "TicTac");
-    console.log("TicTac");
   }
   if(res === "OOO"){
     io.sockets.emit("gameEnd", "Toe");
@@ -84,7 +83,6 @@ function fillBoard(squareID, isX){
   var stillSpace = drawYet();
   if(!stillSpace){
     io.sockets.emit("gameEnd", "Draw");
-    console.log("draww");
   }
 }
 

@@ -1,6 +1,8 @@
 var socket = io.connect("https://tac-tic-toe.glitch.me/");
 const squares = document.querySelectorAll(".emptysquare");
 const handle = document.getElementById("handle");
+const winningMessage = document.getElementById("winningMessage");
+const winningMessageTextElement = document.querySelector('[data-winning-message-text]');
 
 var playerX = true;
 
@@ -33,6 +35,12 @@ socket.on("move", function(data){
     playerX = true;
   }
 });
+
+socket.on("gameEnd", function(data){
+  if(data === "Draw") winningMessageTextElement.innerText = 'Draw!'
+  if(data === "TicTac") winningMessageTextElement.innerText = 'Draw!'
+  winningMessage.classList.add("show");
+})
 
 
 
