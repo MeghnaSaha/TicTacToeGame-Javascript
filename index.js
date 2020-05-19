@@ -24,11 +24,16 @@ var board = [['', '', ''],
             ['', '', '']];
 
 function drawYet(){
+  var stillSpace = false;
   for(var i=0; i<3; i++){
     for(var j=0; j<3; j++){
-    if(board[i][j] === ''){}
+      if(board[i][j] === ''){
+        stillSpace = true;
+        return stillSpace;
+      }
     }
   }
+  return stillSpace;
 }
 
 function fillBoard(squareID, isX){
@@ -69,10 +74,15 @@ function fillBoard(squareID, isX){
   }
   var res = findWinner();
   if(res === "XXX"){
-    app.render('winResult', {winner: "X"});
+    //app.render('winResult', {winner: "X"});
+    app.send("X wins")
   }
   if(res === "OOO"){
     app.render('winResult', {winner: "O"});
+  }
+  var stillSpace = drawYet();
+  if(!stillSpace){
+    app.render('drawScreen');
   }
 }
 
