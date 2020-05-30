@@ -6,4 +6,4 @@ Run "npm start" on terminal to start up the server.
 
 
 
-### Made by [Glitch](https://glitch.com/)
+#### Made using [Glitch](https://glitch.com/)
